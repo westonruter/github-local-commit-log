@@ -6,7 +6,7 @@
         <link rel=stylesheet href=style.css>
     </head>
     <body>
-        <h1>Commit Log for <a target="_blank" href="<?php e($github_project_url . 'commits/' . $branch ) ?>"><code><?php e($branch) ?></code></a></h1>
+        <h1>Commit Log for <a target="_blank" href="<?php e($github_branch_commits_url) ?>"><code><?php e($branch) ?></code></a></h1>
 
         <ol reversed>
             <?php $commits = get_commits(); ?>
@@ -24,7 +24,8 @@
                     </h2>
                     <p>
                         by <a href="<?php e('mailto:' . $commit->author_email) ?>"><?php e($commit->author_name) ?><img class='gravatar' src="<?php e(get_author_gravatar($commit)) ?>" alt="<?php e($commit->author_name) ?>"></a>,
-                        <time datetime="<?php e(gmdate(DATE_W3C, strtotime($commit->date))) ?>" title="<?php e(date('r', strtotime($commit->date))) ?>"><?php e($commit->date_relative) ?></time>
+                        <time datetime="<?php e(gmdate(DATE_W3C, strtotime($commit->date))) ?>" title="<?php e(date('r', strtotime($commit->date))) ?>"><?php e($commit->date_relative) ?></time>.
+                        <a target="_blank" title="See all of this author's commits" href="<?php e($github_branch_commits_url . '?author=' . urlencode($commit->author_email)) ?>">Commits</a>
                     </p>
                     <ul class="changeset">
                         <?php foreach($changeset as $change): ?>

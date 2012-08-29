@@ -19,6 +19,7 @@ $github_project_url = "https://github.com/{$github_account}/{$github_repo}/";
 $branch = str_replace('refs/heads/', '', `git symbolic-ref HEAD`);
 $github_branch_base_url = $github_project_url . 'tree/' . $branch . '/';
 $github_branch_blame_base_url = $github_project_url . 'blame/' . $branch . '/';
+$github_branch_commits_url = $github_project_url . 'commits/' . $branch;
 
 
 function get_commits() {
