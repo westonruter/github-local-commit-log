@@ -1,4 +1,5 @@
 <?php
+chdir($_SERVER['DOCUMENT_ROOT']); // Necessary when commit-log is symlinked from another project
 
 $remotes_raw = `git remote -v`;
 if (!preg_match('#^origin\s+.*?github.com(?:/|:)([^/]+)/(.+?)\.git#m', $remotes_raw, $matches)) {
@@ -23,7 +24,6 @@ $pretty_format = array(
 );
 $separator = "\t\t";
 
-chdir($_SERVER['DOCUMENT_ROOT']);
 exec('git log --pretty=' . escapeshellarg(join($separator, array_keys($pretty_format))), $commits, $retval);
 
 
