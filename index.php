@@ -52,53 +52,7 @@ function get_hash_color($hash, $opacity = 0.05) {
     <head>
         <meta charset=utf-8>
         <title>Commit Log</title>
-        <style>
-        h2 {
-            margin-top: 0;
-            margin-bottom: 0.2em;
-        }
-        h2 + p {
-            margin-top: 0;
-        }
-        ol > li {
-            margin-bottom: 0.5em;
-            padding: 0.5em;
-            position: relative;
-            padding-right: 75px;
-        }
-        .changeset {
-            padding-left: 0;
-        }
-        .changeset > li {
-            list-style: none;
-        }
-        .changeset > li .path,
-        .changeset > li .status {
-            font-family: monospace;
-        }
-        .changeset > li a {
-            font-size: 0.8em;
-        }
-        .changeset > li:hover {
-            background-color: #F7F7CA;
-        }
-        .changeset > li a::before {
-            content: '[';
-            text-decoration: none;
-        }
-        .changeset > li a::after {
-            content: ']';
-            text-decoration: none;
-        }
-        .changeset > .d .path {
-            text-decoration: line-through;
-        }
-        .gravatar {
-            position: absolute;
-            right: 5px;
-            top: 5px;
-        }
-        </style>
+        <link rel=stylesheet href=style.css>
     </head>
     <body>
         <h1>Commit Log <code><?php e($branch) ?></code></h1>
