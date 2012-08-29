@@ -6,7 +6,7 @@
         <link rel=stylesheet href=style.css>
     </head>
     <body>
-        <h1>Commit Log <code><?php e($branch) ?></code></h1>
+        <h1>Commit Log for <a target="_blank" href="<?php e($github_project_url . 'commits/' . $branch ) ?>"><code><?php e($branch) ?></code></a></h1>
 
         <ol reversed>
             <?php $commits = get_commits(); ?>
