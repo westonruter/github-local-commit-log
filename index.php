@@ -23,6 +23,7 @@ $pretty_format = array(
 );
 $separator = "\t\t";
 
+chdir($_SERVER['DOCUMENT_ROOT']);
 exec('git log --pretty=' . escapeshellarg(join($separator, array_keys($pretty_format))), $commits, $retval);
 
 
