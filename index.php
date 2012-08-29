@@ -1,4 +1,10 @@
 <?php
+/**
+ * GitHub Local Commit Log
+ * @author Weston Ruter
+ * https://github.com/westonruter/github-local-commit-log
+ */
+
 chdir($_SERVER['DOCUMENT_ROOT']); // Necessary when commit-log is symlinked from another project
 
 $remotes_raw = `git remote -v`;

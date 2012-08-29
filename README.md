@@ -1,3 +1,6 @@
+GitHub Local Commit Log
+-----------------------
+
 GitHub provides a great interface for browsing commits and doing code reviews
 via inline comments. However, when doing code reviews on projects that have lots
 of commits both from template (frontend) developers and functional (backend)
@@ -21,3 +24,10 @@ and so can remember which changes have been reviewed based on the link
 This little web app is intended to run on your local environment. Checkout the
 repo somewhere on your system, then add a symlink into the docroot of your
 project to point to the repo. Obviously be sure you `.gitignore` the symlink.
+
+
+License
+-------
+Dual licensed under the MIT or GPL Version 2 licenses.  
+MIT License: http://creativecommons.org/licenses/MIT/  
+GPL 2.0 license: http://creativecommons.org/licenses/GPL/2.0/
