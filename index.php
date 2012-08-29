@@ -108,6 +108,7 @@ function get_hash_color($hash, $opacity = 0.05) {
                         <?php endforeach; ?>
                     </ul>
                 </li>
+                <?php flush(); ?>
             <?php endforeach; ?>
         </ol>
     </body>
