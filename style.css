@@ -25,6 +25,12 @@ ol > li {
 .changeset > li a {
     font-size: 0.8em;
 }
+.changeset a.diff:link {
+    background: yellow;
+}
+.changeset a.diff:visited {
+    background: lime;
+}
 .changeset > li:hover {
     background-color: #F7F7CA;
 }
