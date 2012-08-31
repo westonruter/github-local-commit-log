@@ -23,9 +23,9 @@
                         <?php e($commit->subject) ?>
                     </h2>
                     <p>
-                        by <a href="<?php e('mailto:' . $commit->author_email) ?>"><?php e($commit->author_name) ?><img class='gravatar' src="<?php e(get_author_gravatar($commit)) ?>" alt="<?php e($commit->author_name) ?>"></a>,
+                        by <a href="<?php e('mailto:' . $commit->author_email) ?>"><?php e($commit->author_name) ?><img class='gravatar' src="<?php e(get_author_gravatar($commit)) ?>" alt="<?php e($commit->author_name) ?>"></a>
+                        (<a target="_blank" title="See all of this author's commits" href="<?php e($github_branch_commits_url . '?author=' . urlencode($commit->author_email)) ?>">Commits</a>),
                         <time datetime="<?php e(gmdate(DATE_W3C, strtotime($commit->date))) ?>" title="<?php e(date('r', strtotime($commit->date))) ?>"><?php e($commit->date_relative) ?></time>.
-                        <a target="_blank" title="See all of this author's commits" href="<?php e($github_branch_commits_url . '?author=' . urlencode($commit->author_email)) ?>">Commits</a>
                     </p>
                     <ul class="changeset">
                         <?php foreach($changeset as $change): ?>
